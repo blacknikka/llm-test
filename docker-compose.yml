@@ -2,18 +2,18 @@ version: '3.8'
 
 services:
   frontend:
-    build: ./frontend
+    build: ./todo-app/frontend
     ports:
       - "3000:3000"
     depends_on:
       - backend
 
   backend:
-    build: ./backend
+    build: ./todo-app/backend
     ports:
       - "5000:5000"
     env_file:
-      - ./backend/.env
+      - ./todo-app/backend/.env
     depends_on:
       - mongo
 

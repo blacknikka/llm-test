@@ -31,6 +31,38 @@
 
    サーバーはデフォルトで `http://localhost:5000` で起動します。
 
+## MongoDBの動作確認
+
+MongoDBが正しく起動しているか確認するには、以下のコマンドを実行してください。
+
+```bash
+docker-compose exec mongo mongosh --eval "db.adminCommand('ping')"
+```
+
+`{ ok: 1 }` が返ればMongoDBは正常に動作しています。
+
+また、MongoDBシェルに入り、データベースやコレクションの状態を確認することもできます。
+
+```bash
+docker-compose exec mongo mongosh
+```
+
+シェル内で以下のコマンドを実行してください。
+
+```javascript
+show dbs
+use tododb
+show collections
+db.todos.find().limit(1)
+```
+
+### 補足
+
+MongoDBは、最初の書き込み操作が行われた時点で自動的にデータベースやコレクションが作成されます。  
+そのため、`tododb` がまだ存在しない状態で `use tododb` や `db.todos.find()` などのクエリを実行してもエラーにはなりません。  
+この場合、単に空の結果が返るだけです。  
+書き込み操作（例: ドキュメントの挿入）を行うと、その時点で `tododb` データベースや `todos` コレクションが自動的に作成されます。
+
 ## APIエンドポイント
 
 ### Todos
