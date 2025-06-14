@@ -1,10 +1,10 @@
-# TODO Application
+# TODOアプリケーション
 
-This is a simple web-based TODO application that consists of a frontend built with React and a backend powered by Express. The application allows users to manage their tasks without requiring user login.
+このプロジェクトは、Reactで構築されたフロントエンドとExpressを利用したバックエンドから成るシンプルなWebベースのTODOアプリケーションです。ユーザー登録なしでタスク管理が可能です。
 
-## Project Structure
+## プロジェクト構成
 
-The project is organized into two main directories: `frontend` and `backend`.
+本プロジェクトは「frontend」と「backend」の2つのディレクトリに分かれています。
 
 ```
 todo-app
@@ -37,63 +37,63 @@ todo-app
 └── README.md
 ```
 
-## Features
+## 機能
 
-- **Add Todo**: Users can add new tasks to their todo list.
-- **View Todos**: Users can view all their tasks in a list format.
-- **Update Todo**: Users can mark tasks as completed or edit their titles.
-- **Delete Todo**: Users can remove tasks from their list.
+- **Todo追加**: 新しいタスクを追加できます。
+- **Todo一覧表示**: すべてのタスクをリスト形式で表示します。
+- **Todo更新**: タスクの完了状態やタイトルを編集できます。
+- **Todo削除**: タスクをリストから削除できます。
 
-## Getting Started
+## はじめに
 
-### Prerequisites
+### 必要要件
 
-- Node.js (v14 or higher)
-- npm (Node Package Manager)
+- Node.js（バージョン14以上）
+- npm（Node Package Manager）
 
-### Installation
+### インストール手順
 
-1. Clone the repository:
+1. リポジトリをクローンします:
    ```
    git clone <repository-url>
    cd todo-app
    ```
 
-2. Install backend dependencies:
+2. バックエンドの依存パッケージをインストールします:
    ```
    cd backend
    npm install
    ```
 
-3. Install frontend dependencies:
+3. フロントエンドの依存パッケージをインストールします:
    ```
    cd frontend
    npm install
    ```
 
-### Running the Application
+### アプリケーションの起動
 
-1. Start the backend server:
+1. バックエンドサーバーを起動します:
    ```
    cd backend
    npm start
    ```
 
-2. Start the frontend application:
+2. フロントエンドアプリケーションを起動します:
    ```
    cd frontend
    npm start
    ```
 
-The application will be available at `http://localhost:3000` for the frontend and `http://localhost:5000` for the backend.
+フロントエンドは `http://localhost:3000`、バックエンドは `http://localhost:5000` で利用できます。
 
-## API Endpoints
+## APIエンドポイント
 
-- `GET /todos`: Retrieve all todos
-- `POST /todos`: Create a new todo
-- `PUT /todos/:id`: Update an existing todo
-- `DELETE /todos/:id`: Delete a todo
+- `GET /todos`: Todo一覧の取得
+- `POST /todos`: 新規Todoの作成
+- `PUT /todos/:id`: 既存Todoの更新
+- `DELETE /todos/:id`: Todoの削除
 
-## License
+## ライセンス
 
-This project is licensed under the MIT License.
+このプロジェクトはMITライセンスで提供されています。

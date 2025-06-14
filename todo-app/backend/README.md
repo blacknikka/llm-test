@@ -1,50 +1,50 @@
-# TODO Application Backend
+# TODOアプリケーション バックエンド
 
-## Overview
-This is the backend component of a simple TODO application. It provides a RESTful API for managing todo items, allowing users to create, read, update, and delete todos without requiring user authentication.
+## 概要
+このプロジェクトはシンプルなTODOアプリケーションのバックエンドです。ユーザー認証なしで、タスク（Todo）の作成・取得・更新・削除ができるRESTful APIを提供します。
 
-## Technologies Used
+## 使用技術
 - Node.js
 - Express
-- Mongoose (for MongoDB interaction)
+- Mongoose（MongoDB用ODM）
 
-## Setup Instructions
+## セットアップ手順
 
-1. **Clone the repository**
+1. **リポジトリをクローン**
    ```bash
    git clone <repository-url>
    cd todo-app/backend
    ```
 
-2. **Install dependencies**
+2. **依存パッケージのインストール**
    ```bash
    npm install
    ```
 
-3. **Configure the database**
-   Update the database connection settings in `src/utils/db.js` to match your MongoDB configuration.
+3. **データベース設定**
+   `src/utils/db.js` 内のMongoDB接続設定を自身の環境に合わせて編集してください。
 
-4. **Start the server**
+4. **サーバーの起動**
    ```bash
    npm start
    ```
 
-   The server will run on `http://localhost:3000` by default.
+   サーバーはデフォルトで `http://localhost:5000` で起動します。
 
-## API Endpoints
+## APIエンドポイント
 
 ### Todos
-- **GET /todos**: Retrieve all todo items.
-- **POST /todos**: Create a new todo item.
-- **PUT /todos/:id**: Update an existing todo item by ID.
-- **DELETE /todos/:id**: Delete a todo item by ID.
+- **GET /api/todos**: Todo一覧を取得
+- **POST /api/todos**: 新規Todoを作成
+- **PUT /api/todos/:id**: 指定IDのTodoを更新
+- **DELETE /api/todos/:id**: 指定IDのTodoを削除
 
-## File Structure
-- `src/app.js`: Entry point for the application.
-- `src/controllers/todosController.js`: Contains the logic for handling todo operations.
-- `src/models/todo.js`: Defines the schema for a todo item.
-- `src/routes/todos.js`: Sets up the routes for the todo API.
-- `src/utils/db.js`: Utility functions for database connection.
+## ファイル構成
+- `src/app.js`: アプリケーションのエントリーポイント
+- `src/controllers/todosController.js`: Todo操作のロジック
+- `src/models/todo.js`: Todoスキーマ定義
+- `src/routes/todos.js`: Todo APIのルーティング
+- `src/utils/db.js`: データベース接続ユーティリティ
 
-## License
-This project is licensed under the MIT License.
+## ライセンス
+このプロジェクトはMITライセンスで提供

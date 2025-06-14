@@ -1,48 +1,48 @@
-# TODO Application Frontend
+# TODOアプリケーション フロントエンド
 
-This is the frontend part of the TODO application built using React. The application allows users to manage their tasks efficiently without requiring user login.
+このプロジェクトはReactで構築されたTODOアプリケーションのフロントエンド部分です。ユーザー登録なしでタスク管理が可能です。
 
-## Project Structure
+## プロジェクト構成
 
-- **public/index.html**: The main HTML file that serves as the entry point for the application.
-- **src/App.js**: The main component that manages the overall structure and state of the app.
-- **src/components/**: Contains React components for the application:
-  - **TodoList.js**: Renders a list of todo items.
-  - **TodoItem.js**: Represents a single todo item.
-  - **AddTodo.js**: Provides a form for adding new todo items.
-- **src/utils/api.js**: Contains utility functions for making API calls to the backend.
+- **public/index.html**: アプリケーションのエントリーポイントとなるHTMLファイル
+- **src/App.js**: アプリ全体の構造と状態を管理するメインコンポーネント
+- **src/components/**: Reactコンポーネント群
+  - **TodoList.js**: Todoリストを表示するコンポーネント
+  - **TodoItem.js**: 単一のTodoアイテムを表すコンポーネント
+  - **AddTodo.js**: 新しいTodoを追加するフォームコンポーネント
+- **src/utils/api.js**: バックエンドAPIとの通信を行うユーティリティ関数
 
-## Setup Instructions
+## セットアップ手順
 
-1. **Clone the Repository**
+1. **リポジトリをクローン**
    ```bash
    git clone <repository-url>
    cd todo-app/frontend
    ```
 
-2. **Install Dependencies**
+2. **依存パッケージのインストール**
    ```bash
    npm install
    ```
 
-3. **Run the Application**
+3. **アプリケーションの起動**
    ```bash
    npm start
    ```
 
-   The application will be available at `http://localhost:3000`.
+   アプリケーションは `http://localhost:3000` で利用できます。
 
-## Usage
+## 使い方
 
-- Add new todos using the form provided in the application.
-- View the list of todos displayed on the main page.
-- Mark todos as completed or delete them as needed.
+- フォームから新しいTodoを追加できます。
+- 追加したTodoはリストで表示されます。
+- Todoの完了状態の切り替えや削除が可能です。
 
-## Technologies Used
+## 使用技術
 
-- React: A JavaScript library for building user interfaces.
-- Axios: For making HTTP requests to the backend API.
+- React: UI構築用JavaScriptライブラリ
+- fetch API: バックエンドAPIとのHTTP通信
 
-## Contributing
+## コントリビュート
 
-Feel free to submit issues or pull requests if you have suggestions or improvements for the application.
+バグ報告や機能追加の提案など、IssueやPull Requestを歓迎します。
