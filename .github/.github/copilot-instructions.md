@@ -7,7 +7,7 @@
     - Node.js
     - TypeScript
     - Express
-    - MySQL
+    - MongoDB
 
 # ディレクトリ構成
 - フロントエンド
