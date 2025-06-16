@@ -1,8 +1,9 @@
-const mongoose = require('mongoose');
+// filepath: /home/yasu/work/adr/llm-test/todo-app/backend/src/utils/db.ts
+import mongoose from 'mongoose';
 
-const connectDB = async () => {
+const connectDB = async (): Promise<void> => {
     try {
-        await mongoose.connect(process.env.MONGO_URI, {
+        await mongoose.connect(process.env.MONGO_URL as string, {
             useNewUrlParser: true,
             useUnifiedTopology: true,
         });
@@ -13,4 +14,4 @@ const connectDB = async () => {
     }
 };
 
-module.exports = connectDB;
+export default connectDB;

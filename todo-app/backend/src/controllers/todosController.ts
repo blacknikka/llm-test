@@ -1,9 +1,11 @@
 class TodosController {
-    constructor(todoModel) {
+    private todoModel: any;
+
+    constructor(todoModel: any) {
         this.todoModel = todoModel;
     }
 
-    async createTodo(req, res) {
+    async createTodo(req: any, res: any): Promise<void> {
         try {
             const { title } = req.body;
             const newTodo = await this.todoModel.create({ title, completed: false });
@@ -13,7 +15,7 @@ class TodosController {
         }
     }
 
-    async getTodos(req, res) {
+    async getTodos(req: any, res: any): Promise<void> {
         try {
             const todos = await this.todoModel.find();
             res.status(200).json(todos);
@@ -22,7 +24,7 @@ class TodosController {
         }
     }
 
-    async updateTodo(req, res) {
+    async updateTodo(req: any, res: any): Promise<void> {
         try {
             const { id } = req.params;
             const { title, completed } = req.body;
@@ -36,7 +38,7 @@ class TodosController {
         }
     }
 
-    async deleteTodo(req, res) {
+    async deleteTodo(req: any, res: any): Promise<void> {
         try {
             const { id } = req.params;
             const deletedTodo = await this.todoModel.findByIdAndDelete(id);

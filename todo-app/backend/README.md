@@ -7,6 +7,7 @@
 - Node.js
 - Express
 - Mongoose（MongoDB用ODM）
+- TypeScript
 
 ## セットアップ手順
 
@@ -22,7 +23,7 @@
    ```
 
 3. **データベース設定**
-   `src/utils/db.js` 内のMongoDB接続設定を自身の環境に合わせて編集してください。
+   `src/utils/db.ts` 内のMongoDB接続設定を自身の環境に合わせて編集してください。
 
 4. **サーバーの起動**
    ```bash
@@ -104,10 +105,10 @@ MongoDBは、最初の書き込み操作が行われた時点で自動的にデ�
 - **DELETE /api/todos/:id**: 指定IDのTodoを削除
 
 ## ファイル構成
-- `src/app.js`: アプリケーションのエントリーポイント
-- `src/controllers/todosController.js`: Todo操作のロジック
-- `src/models/todo.js`: Todoスキーマ定義
-- `src/routes/todos.js`: Todo APIのルーティング
-- `src/utils/db.js`: データベース接続ユーティリティ
+- `src/app.ts`: アプリケーションのエントリーポイント
+- `src/controllers/todosController.ts`: Todo操作のロジック
+- `src/models/todo.ts`: Todoスキーマ定義
+- `src/routes/todos.ts`: Todo APIのルーティング
+- `src/utils/db.ts`: データベース接続ユーティリティ
 
 ## ライセンス
