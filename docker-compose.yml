@@ -7,8 +7,8 @@ services:
       - "3000:3000"
     depends_on:
       - backend
-    volumes:
-      - ./todo-app/frontend:/app
+    # volumes:
+    #   - ./todo-app/frontend:/app
 
   backend:
     build: ./todo-app/backend
@@ -18,8 +18,8 @@ services:
       - ./todo-app/backend/.env
     depends_on:
       - mongo
-    volumes:
-      - ./todo-app/backend:/app
+    # volumes:
+    #   - ./todo-app/backend:/app
 
   mongo:
     image: mongo:6
