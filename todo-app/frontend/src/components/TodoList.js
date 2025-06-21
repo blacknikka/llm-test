@@ -7,12 +7,12 @@ const TodoList = ({ todos, onToggle, onDelete }) => {
     }
     return (
         <ul className="todo-list">
-            {todos.map(todo => (
-                <TodoItem 
-                    key={todo.id} 
-                    todo={todo} 
-                    onToggle={onToggle} 
-                    onDelete={onDelete} 
+            {todos.map((todo) => (
+                <TodoItem
+                    key={todo.id || todo._id || todo.key} // id, _id, key の順で一意な値を利用
+                    todo={todo}
+                    onToggle={onToggle}
+                    onDelete={onDelete}
                 />
             ))}
         </ul>
