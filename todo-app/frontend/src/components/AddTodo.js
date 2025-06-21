@@ -1,17 +1,13 @@
 import React, { useState } from 'react';
-import { addTodo } from '../utils/api';
 
-const AddTodo = ({ onTodoAdded }) => {
+const AddTodo = ({ onAddTodo }) => {
     const [title, setTitle] = useState('');
 
     const handleSubmit = async (e) => {
         e.preventDefault();
         if (!title) return;
-
-        const newTodo = { title, completed: false };
-        await addTodo(newTodo);
+        await onAddTodo(title);
         setTitle('');
-        onTodoAdded();
     };
 
     return (
@@ -22,7 +18,7 @@ const AddTodo = ({ onTodoAdded }) => {
                 onChange={(e) => setTitle(e.target.value)}
                 placeholder="Add a new todo"
             />
-            <button type="submit">Add Todo</button>
+            <button type="submit">追加</button>
         </form>
     );
 };
