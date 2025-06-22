@@ -10,7 +10,10 @@ const connectDB = async (): Promise<void> => {
         console.log('MongoDB connected');
     } catch (error) {
         console.error('MongoDB connection error:', error);
-        process.exit(1);
+        // Only exit process if not in test environment
+        if (process.env.NODE_ENV !== 'test') {
+            process.exit(1);
+        }
     }
 };
 

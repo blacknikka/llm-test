@@ -7,8 +7,10 @@ import connectDB from './utils/db';
 const app = express();
 const PORT = process.env.PORT || 5000;
 
-// Connect to the database
-connectDB();
+// Connect to the database only if not in test environment
+if (process.env.NODE_ENV !== 'test') {
+    connectDB();
+}
 
 // Middleware
 app.use(cors({ origin: 'http://localhost:3000' })); // 追加
@@ -18,8 +20,11 @@ app.use(bodyParser.urlencoded({ extended: true }));
 // Routes
 app.use('/api/todos', todosRoutes);
 
-app.listen(PORT, () => {
-    console.log(`Server is running on http://localhost:${PORT}`);
-});
+// Only start server if not in test environment
+if (process.env.NODE_ENV !== 'test') {
+    app.listen(PORT, () => {
+        console.log(`Server is running on http://localhost:${PORT}`);
+    });
+}
 
 export default app;
