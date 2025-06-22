@@ -5,7 +5,7 @@ const AddTodo = ({ onAddTodo }) => {
 
     const handleSubmit = async (e) => {
         e.preventDefault();
-        if (!title) return;
+        if (!title || !title.trim()) return;
         await onAddTodo(title);
         setTitle('');
     };
