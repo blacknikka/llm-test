@@ -3,6 +3,8 @@ import mongoose, { Document, Schema } from 'mongoose';
 interface ITodo extends Document {
     title: string;
     completed: boolean;
+    createdAt: Date;
+    updatedAt: Date;
 }
 
 const todoSchema: Schema = new Schema({

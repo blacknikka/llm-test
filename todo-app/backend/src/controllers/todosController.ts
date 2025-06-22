@@ -7,8 +7,8 @@ class TodosController {
 
     async createTodo(req: any, res: any): Promise<void> {
         try {
-            const { title } = req.body;
-            const newTodo = await this.todoModel.create({ title, completed: false });
+            const { title, completed = false } = req.body;
+            const newTodo = await this.todoModel.create({ title, completed });
             res.status(201).json(newTodo);
         } catch (error) {
             res.status(500).json({ message: 'Error creating todo', error });
